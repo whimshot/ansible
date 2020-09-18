@@ -1,14 +1,13 @@
 ---
 - hosts: all
+  become: true
   tasks:
 
   - name: update apt cache
-    become: yes
     apt:
       update_cache: yes
 
   - name: base packages
-    become: yes
     package:
       name:
         - git
