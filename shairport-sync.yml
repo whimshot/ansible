@@ -1,0 +1,21 @@
+---
+- hosts: speakers
+  tasks:
+  - name: setup for shairport-sync
+    become: yes
+    package:
+      name:
+        - autoconf
+        - automake
+        - avahi-daemon
+        - build-essential
+        - git
+        - libasound2-dev
+        - libavahi-client-dev
+        - libconfig-dev
+        - libdaemon-dev
+        - libpopt-dev
+        - libssl-dev
+        - libtool
+        - xmltoman
+      state: present

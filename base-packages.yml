@@ -1,0 +1,19 @@
+---
+- hosts: all
+  tasks:
+
+  - name: update apt cache
+    become: yes
+    apt:
+      update_cache: yes
+
+  - name: base packages
+    become: yes
+    package:
+      name:
+        - git
+        - htop
+        - python3
+        - screen
+        - tmux
+      state: present

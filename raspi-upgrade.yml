@@ -1,0 +1,10 @@
+---
+- hosts: raspberrypi
+  tasks:
+  - name: full-upgrade
+    apt:
+      autoclean: yes
+      autoremove: yes
+      update_cache: yes
+      upgrade: full
+    become: yes
