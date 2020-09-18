@@ -1,7 +1,5 @@
 ---
 # tasks file for raspberrypi
-tasks:
-
 - name: update apt
   apt:
     update_cache: yes
