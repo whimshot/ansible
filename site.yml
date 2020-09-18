@@ -1,0 +1,4 @@
+---
+  - import_playbook: base-packages.yml
+  - import_playbook: raspi-upgrade.yml
+  - import_playbook: shairport-sync.yml
