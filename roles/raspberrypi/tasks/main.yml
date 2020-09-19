@@ -15,6 +15,7 @@
       - htop
       - python3
       - python3-dev
+      - ruby
       - screen
       - tmux
     state: present
