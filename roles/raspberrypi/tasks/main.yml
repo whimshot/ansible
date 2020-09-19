@@ -10,6 +10,7 @@
 - name: install base packages
   package:
     name:
+      - facter
       - git
       - htop
       - python3
