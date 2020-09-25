@@ -1,5 +1,5 @@
 ---
-- hosts: speakers
-  become: true
-  roles:
-    - colinj.shairport-sync
+  - hosts: speakers
+    become: true
+    roles:
+      - colinj.shairport-sync
