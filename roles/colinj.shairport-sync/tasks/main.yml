@@ -52,6 +52,7 @@
     target: install
 
 - name: enable and (re)start shairport-sync service
-    service: shairport-sync
-    enabled: yes
-    state: restarted
+    service:
+      name: shairport-sync
+      enabled: yes
+      state: restarted
