@@ -41,3 +41,7 @@
       - --with-avahi
       - --with-ssl=openssl
       - --with-systemd
+
+- name: build shairport-sync
+  community.general.make:
+    chdir: /home/pi/shairport-sync
