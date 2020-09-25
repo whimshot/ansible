@@ -50,3 +50,8 @@
   community.general.make:
     chdir: /home/pi/shairport-sync
     target: install
+
+- name: enable and (re)start shairport-sync service
+    service: shairport-sync
+    enabled: yes
+    state: restarted
