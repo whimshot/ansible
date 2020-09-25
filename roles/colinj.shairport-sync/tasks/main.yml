@@ -45,3 +45,8 @@
 - name: build shairport-sync
   community.general.make:
     chdir: /home/pi/shairport-sync
+
+- name: install shairport-sync
+  community.general.make:
+    chdir: /home/pi/shairport-sync
+    target: install
