@@ -27,4 +27,5 @@
 
 - name: autoreconf -i -f
   command: /usr/bin/autoreconf -i -f
-  chdir: /home/pi/shairport-sync
+  args:
+    chdir: /home/pi/shairport-sync
