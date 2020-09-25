@@ -19,8 +19,8 @@
       - xmltoman
     state: present
 
-  # tasks to build and install shairport-sync
-  - name: git clone shairport-sync
-    git:
-      repo: https://github.com/mikebrady/shairport-sync.git
-      dest: /home/pi/shairport-sync
+# tasks to build and install shairport-sync
+- name: git clone shairport-sync
+  git:
+    repo: https://github.com/mikebrady/shairport-sync.git
+    dest: /home/pi/shairport-sync
