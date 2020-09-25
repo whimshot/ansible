@@ -25,7 +25,19 @@
     repo: https://github.com/mikebrady/shairport-sync.git
     dest: /home/pi/shairport-sync
 
-- name: autoreconf -i -f
+- name: run autoreconf
   command: /usr/bin/autoreconf -i -f
   args:
     chdir: /home/pi/shairport-sync
+
+- name: run ./configure
+  command:
+  args:
+    chdir: /home/pi/shairport-sync
+    argv:
+      - ./configure
+      - --sysconfdir=/etc
+      - --with-alsa
+      - --with-avahi
+      - --with-ssl=openssl
+      - --with-systemd
