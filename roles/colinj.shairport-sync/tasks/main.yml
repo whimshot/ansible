@@ -56,3 +56,8 @@
     name: shairport-sync
     enabled: yes
     state: restarted
+
+- name: remove build directory
+  file:
+    path: /home/pi/shairport-sync
+    state: absent
