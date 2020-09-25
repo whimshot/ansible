@@ -26,5 +26,4 @@
     dest: /home/pi/shairport-sync
 
 - name: autoreconf -i -f
-  command: /usr/bin/autoreconf
-  args: -i -f
+  command: /usr/bin/autoreconf -i -f
