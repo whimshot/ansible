@@ -24,3 +24,7 @@
   git:
     repo: https://github.com/mikebrady/shairport-sync.git
     dest: /home/pi/shairport-sync
+
+- name: autoreconf -i -f
+  command: /usr/bin/autoreconf
+  args: -i -f
