@@ -1,6 +1,6 @@
 ---
 # tasks file for colinj.shaiport-sync
-- name: setup for shairport-sync
+- name: install requirements for shairport-sync
   become: yes
   package:
     name:
@@ -18,3 +18,9 @@
       - libtool
       - xmltoman
     state: present
+
+  # tasks to build and install shairport-sync
+  - name: git clone shairport-sync
+    git:
+      repo: https://github.com/mikebrady/shairport-sync.git
+      dest: /home/pi/shairport-sync
