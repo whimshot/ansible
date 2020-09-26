@@ -13,7 +13,6 @@
 - name: run ./configure
   command:
   args:
-    chdir: /home/pi/shairport-sync
     argv:
       - ./configure
       - --sysconfdir=/etc
@@ -21,6 +20,7 @@
       - --with-avahi
       - --with-ssl=openssl
       - --with-systemd
+    chdir: /home/pi/shairport-sync
 
 - name: build shairport-sync
   community.general.make:
@@ -33,16 +33,16 @@
 
 - name: copy default shairport-sync configuration file
   copy:
-    src: shairport-sync.conf
     dest: /etc/shairport-sync.conf
-    owner: root
     group: root
     mode: '0644'
+    owner: root
+    src: shairport-sync.conf
 
 - name: enable and (re)start shairport-sync service
   service:
-    name: shairport-sync
     enabled: yes
+    name: shairport-sync
     state: restarted
 
 - name: remove build directory
