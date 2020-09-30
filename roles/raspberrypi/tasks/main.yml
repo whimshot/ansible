@@ -1,13 +1,13 @@
 ---
 # tasks file for raspberrypi
-- name: full-upgrade
+- name: 'full-upgrade'
   apt:
     autoclean: yes
     autoremove: yes
     update_cache: yes
     upgrade: full
 
-- name: install base packages
+- name: 'install base packages'
   package:
     name:
       - facter
