@@ -5,13 +5,13 @@
     repo: https://github.com/mikebrady/shairport-sync.git
     dest: /home/pi/shairport-sync
     version: 3.3.7rc3
-  register: rebuild
+  register: gitclone
 
 - name: run autoreconf
   command: /usr/bin/autoreconf -i -f
   args:
     chdir: /home/pi/shairport-sync
-  when: rebuild
+  when: gitclone.after != gitclone.before
 
 - name: 'run ./configure'
   command:
@@ -24,7 +24,7 @@
       - --with-ssl=openssl
       - --with-systemd
     chdir: /home/pi/shairport-sync
-  when: rebuild
+  when: gitclone.after != gitclone.before
 
 - name: 'build shairport-sync'
   community.general.make:
@@ -34,7 +34,7 @@
   community.general.make:
     chdir: /home/pi/shairport-sync
     target: install
-  when: rebuild
+  when: gitclone.after != gitclone.before
 
 - name: 'copy default shairport-sync configuration file'
   copy:
@@ -43,11 +43,11 @@
     mode: '0644'
     owner: root
     src: shairport-sync.conf
-  when: rebuild
+  when: gitclone.after != gitclone.before
 
 - name: 'enable and (re)start shairport-sync service'
   service:
     enabled: yes
     name: shairport-sync
     state: restarted
-  when: rebuild
+  when: gitclone.after != gitclone.before
