@@ -29,6 +29,7 @@
 - name: 'build shairport-sync'
   community.general.make:
     chdir: /home/pi/shairport-sync
+  when: gitclone.after != gitclone.before
 
 - name: install shairport-sync
   community.general.make:
