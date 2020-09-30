@@ -52,3 +52,9 @@
     name: shairport-sync
     state: restarted
   when: gitclone.after != gitclone.before
+
+- name: clean up build artifacts
+  community.general.make:
+    chdir: /home/pi/shairport-sync
+    target: clean
+  when: gitclone.after != gitclone.before
