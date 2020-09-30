@@ -1,9 +1,10 @@
 ---
 # tasks to build and install shairport-sync
-- name: 'git clone shairport-sync'
+- name: 'git clone shairport_sync'
   git:
     repo: https://github.com/mikebrady/shairport-sync.git
     dest: /home/pi/shairport-sync
+    version: HEAD
 
 - name: run autoreconf
   command: /usr/bin/autoreconf -i -f
