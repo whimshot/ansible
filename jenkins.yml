@@ -8,24 +8,24 @@
       - openjdk-11-jre
     jenkins_plugins:
       - ansible
-      - blueocean
-      - workflow-aggregator
-      - git
-      - pam-auth
-      - antisamy-markup-formatter
       - ant
-      - ws-cleanup
-      - github-branch-source
-      - ldap
+      - antisamy-markup-formatter
+      - blueocean
       - build-timeout
-      - pipeline-github-lib
-      - ssh-slaves
-      - email-ext
       - credentials-binding
+      - email-ext
+      - git
+      - github-branch-source
       - gradle
-      - pipeline-stage-view
-      - matrix-auth
+      - ldap
       - mailer
+      - matrix-auth
+      - pam-auth
+      - pipeline-github-lib
+      - pipeline-stage-view
+      - ssh-slaves
+      - workflow-aggregator
+      - ws-cleanup
 
   roles:
     - role: geerlingguy.java
