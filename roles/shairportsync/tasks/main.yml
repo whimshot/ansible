@@ -1,0 +1,4 @@
+---
+# tasks file for colinj.shaiport-sync
+- include_tasks: install_prerequisites.yml
+- include_tasks: build_shairport_sync.yml

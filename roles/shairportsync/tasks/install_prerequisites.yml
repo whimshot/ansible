@@ -1,6 +1,6 @@
 ---
 # tasks file for colinj.shaiport-sync
-- name: 'install requirements for shairport-sync'
+- name: 'install requirements for shairportsync'
   become: yes
   package:
     name:

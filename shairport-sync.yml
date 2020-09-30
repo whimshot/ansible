@@ -2,4 +2,4 @@
   - hosts: speakers
     become: true
     roles:
-      - colinj.shairport-sync
+      - shairportsync
