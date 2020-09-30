@@ -5,7 +5,7 @@
     repo: https://github.com/mikebrady/shairport-sync.git
     dest: /home/pi/shairport-sync
     version: 3.3.7rc3
-    register: rebuild
+  register: rebuild
 
 - name: run autoreconf
   command: /usr/bin/autoreconf -i -f
