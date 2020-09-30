@@ -1,6 +1,6 @@
 ---
 # tasks to build and install shairport-sync
-- name: git clone shairport-sync
+- name: 'git clone shairport-sync'
   git:
     repo: https://github.com/mikebrady/shairport-sync.git
     dest: /home/pi/shairport-sync
@@ -10,7 +10,7 @@
   args:
     chdir: /home/pi/shairport-sync
 
-- name: run ./configure
+- name: 'run ./configure'
   command:
   args:
     argv:
@@ -22,7 +22,7 @@
       - --with-systemd
     chdir: /home/pi/shairport-sync
 
-- name: build shairport-sync
+- name: 'build shairport-sync'
   community.general.make:
     chdir: /home/pi/shairport-sync
 
@@ -31,7 +31,7 @@
     chdir: /home/pi/shairport-sync
     target: install
 
-- name: copy default shairport-sync configuration file
+- name: 'copy default shairport-sync configuration file'
   copy:
     dest: /etc/shairport-sync.conf
     group: root
@@ -39,13 +39,13 @@
     owner: root
     src: shairport-sync.conf
 
-- name: enable and (re)start shairport-sync service
+- name: 'enable and (re)start shairport-sync service'
   service:
     enabled: yes
     name: shairport-sync
     state: restarted
 
-- name: remove build directory
+- name: 'remove build directory'
   file:
     path: /home/pi/shairport-sync
     state: absent
