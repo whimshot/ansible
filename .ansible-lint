@@ -1,0 +1,6 @@
+# .ansible-lint
+skip_list:  # or 'skip_list' to silence them completely
+  - '106'  # Role name {} does not match ``^[a-z][a-z0-9_]+$`` pattern
+  - experimental  # all rules tagged as experimental
+warn_list:
+  - '208'  # File permissions unset or incorrect
