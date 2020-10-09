@@ -1,12 +1,5 @@
 ---
 # tasks file for raspberrypi
-- name: 'full-upgrade'
-  apt:
-    autoclean: yes
-    autoremove: yes
-    update_cache: yes
-    upgrade: full
-
 - name: 'install base packages'
   package:
     name:
