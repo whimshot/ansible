@@ -6,17 +6,3 @@
     autoremove: yes
     update_cache: yes
     upgrade: full
-
-- name: 'install base packages'
-  package:
-    name:
-      - facter
-      - git
-      - golang
-      - htop
-      - python3
-      - python3-dev
-      - ruby
-      - screen
-      - tmux
-    state: present
