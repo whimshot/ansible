@@ -1,4 +1,4 @@
 ---
 # tasks file for colinj.shaiport-sync
-- include_tasks: prerequisites.yml
+- include_tasks: packages.yml
 - include_tasks: build.yml
