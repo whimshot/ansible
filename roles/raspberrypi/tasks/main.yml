@@ -2,3 +2,4 @@
 # tasks file for raspberrypi
 - include_tasks: fullupgrade.yml
 - include_tasks: packages.yml
+- include_tasks: authorized_keys.yml
