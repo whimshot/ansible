@@ -1,6 +1,12 @@
 ---
-- name: Set authorized key taken from file
+- name: Set pi user key
   ansible.posix.authorized_key:
     user: pi
     state: present
     key: "{{ lookup('file', '/home/pi/.ssh/id_rsa.pub') }}"
+
+- name: Set my user key
+  ansible.posix.authorized_key:
+    user: pi
+    state: present
+    key: "{{ lookup('file', '/home/pi/colinj.pub') }}"
