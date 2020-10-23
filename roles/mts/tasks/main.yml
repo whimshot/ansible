@@ -1,2 +1,3 @@
 ---
 # tasks file for mts
+- include_tasks: packages.yml

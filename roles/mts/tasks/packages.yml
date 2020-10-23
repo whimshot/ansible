@@ -1,0 +1,9 @@
+---
+# tasks file for raspberrypi
+- name: 'install base packages'
+  package:
+    name:
+      - c3270
+      - hercules
+      - s3270
+    state: present
