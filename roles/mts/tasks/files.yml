@@ -1,0 +1,7 @@
+---
+- name: copy mts files
+  copy:
+    src: /home/pi/mts.txz
+    dest: /home/pi/mts.txz
+    owner: pi
+    group: pi
