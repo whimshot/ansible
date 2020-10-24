@@ -4,7 +4,7 @@
   git:
     repo: https://github.com/mikebrady/shairport-sync.git
     dest: /home/pi/shairport-sync
-    version: 3.3.7rc3
+    version: 3.3.6
   register: gitclone
 
 - name: run autoreconf
