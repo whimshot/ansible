@@ -3,7 +3,7 @@
   become: true
 
   vars:
-    jenkins_hostname: jenkins.local
+#    jenkins_hostname: jenkins.local
     java_packages:
       - openjdk-11-jre
     jenkins_plugins:
