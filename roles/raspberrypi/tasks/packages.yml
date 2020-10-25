@@ -14,3 +14,10 @@
       - screen
       - tmux
     state: present
+
+- name: 'install ansible via pip'
+  pip:
+    name:
+      - ansible
+      - ansible-lint
+    state: present
