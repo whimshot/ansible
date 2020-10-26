@@ -1,5 +1,6 @@
 ---
   - hosts: raspberrypi
+    strategy: free
     become: true
     roles:
       - raspberrypi
