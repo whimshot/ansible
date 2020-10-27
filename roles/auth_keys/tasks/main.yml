@@ -1,4 +1,5 @@
 ---
+# tasks file for auth_keys
 - name: Set pi user key
   ansible.posix.authorized_key:
     user: pi
