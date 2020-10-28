@@ -2,3 +2,4 @@
   - import_playbook: raspberrypi.yml
   - import_playbook: shairport-sync.yml
   - import_playbook: jenkins.yml
+  - import_playbook: mts.yml

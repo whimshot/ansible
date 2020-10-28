@@ -1,0 +1,5 @@
+---
+  - hosts: mts
+    become: true
+    roles:
+      - mts
